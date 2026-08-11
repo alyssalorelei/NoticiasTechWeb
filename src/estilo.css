@@ -1,0 +1,102 @@
+:root {
+  /* 1. TIPOGRAFÍA Y COLORES BASE */
+  /* La fuente 'Inter' ya está disponible gracias al import en main.ts */
+  --bs-body-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --bs-body-bg: #fcfcfc; /* Un fondo casi blanco, más suave a la vista */
+  --bs-body-color: #333333; /* Gris muy oscuro en lugar de negro puro */
+  
+  /* 2. REEMPLAZO DEL COLOR PRIMARIO */
+  /* Cambiamos el azul brillante por defecto por un tono pizarra/grafito elegante */
+  --bs-primary: #4a5568; 
+  --bs-primary-rgb: 74, 85, 104;
+  
+  /* 3. BORDES */
+  --bs-border-radius: 0.5rem; /* Bordes ligeramente más redondeados y amigables */
+}
+
+/* =========================================
+   AJUSTES FINOS Y SOBRESCRITURAS
+   ========================================= */
+
+/* Espaciado de texto para mayor legibilidad */
+body {
+  letter-spacing: 0.2px;
+  line-height: 1.7;
+
+  /* Color base muy claro */
+  background-color: #f8fafc;
+  
+  /* Patrón geométrico sutil (puntos) usando SVG en base64 */
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2394a3b8' fill-opacity='0.15' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Títulos más sobrios */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #1a202c; /* Un tono ligeramente más oscuro que el texto normal */
+  letter-spacing: -0.5px;
+}
+
+/* Botones: Menos toscos, sin contornos duros al hacer clic */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: none !important; /* Quitamos sombras agresivas */
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Efecto sutil al pasar el mouse sobre el botón principal */
+.btn-primary:hover {
+  background-color: #2d3748;
+  transform: translateY(-1px);
+}
+
+/* Tarjetas (Cards): Sin bordes, con una sombra muy delicada */
+.card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  background-color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.05); /* Un borde ultra fino para separar la tarjeta del fondo */
+}
+
+/* Efecto de elevación suave al pasar el mouse por las tarjetas */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Inputs de formularios más limpios */
+.form-control {
+  border-color: #e2e8f0;
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.15rem rgba(74, 85, 104, 0.15) !important;
+}
+
+.bg_banner {
+    background-color: #1E293B;
+}
+
+.table th {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.table td {
+  font-size: 0.95rem;
+}
+
+/* 4. Clase para crear un círculo perfecto con CSS puro */
+.circulo-estatus {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
